@@ -4,19 +4,20 @@ from PIL import Image
 file_name = 'cat.jpg'
 
 image = Image.open(file_name)
+
 # analyze the image 
 print(image.size)
 print(image.filename)
 print(image.format)
-# show the image
+
+# show the original image
 image.show()
 
-#  flip the image
-# image = image.transpose(Image.Transpose.ROTATE_90)
+# rotate image 30 degrees
+cat_rotated = image.rotate(30)
 
-# # show the image 
-# image.show()
+# save rotated image
+cat_rotated.save('cat_rotated.png', 'png')
 
-# exercise 
-#cat_rotated = image.rotate(30)
-#cat_rotated.save('cat_rotated.png', 'png')
+# show rotated image
+cat_rotated.show()
