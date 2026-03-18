@@ -1,17 +1,9 @@
 from PIL import Image, ImageEnhance
 
-# import an image 
-image = Image.open('cat.jpg')
+image = Image.open('shrimp1.png')
 
-# create an enhancer
-vibrance_enhancer = ImageEnhance.Color(image)
-contrast_enhancer = ImageEnhance.Contrast(image)
-brightness_enhancer = ImageEnhance.Brightness(image)
-sharpness_enhancer = ImageEnhance.Sharpness(image)
+sharp = ImageEnhance.Sharpness(image).enhance(2.0)
+bright = ImageEnhance.Brightness(image).enhance(1.5)
 
-# apply the enhancer 
-enhanced_image = sharpness_enhancer.enhance(1.5)
-
-# show 
-image.show()
-enhanced_image.show()
+sharp.show()
+bright.show()

@@ -111,4 +111,3 @@ class PixelApp:
 root = Tk()
 PixelApp(root)
 root.mainloop()
-
